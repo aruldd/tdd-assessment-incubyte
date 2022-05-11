@@ -13,8 +13,12 @@ describe('Add', () => {
   });
   it('should handle an unknown amount of numbers', () => {
     expect(add('1,2,4,6,7')).toBe(20);
+    expect(add('1,2,6,7')).toBe(16);
   });
   it('should handle new lines between numbers (instead of commas)', () => {
     expect(add('1\n2,4')).toBe(7);
+  });
+  it('should support different delimiters using format "//[delimiter]\n[numbers…]"', () => {
+    expect(add('//;\n1;2')).toBe(3);
   });
 });
