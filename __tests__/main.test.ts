@@ -8,4 +8,7 @@ describe('Add', () => {
   it('should return the same value when only one number', () => {
     expect(add('1')).toBe(1);
   });
+  it('should return the sum of two values', () => {
+    expect(add('1,2')).toBe(3);
+  });
 });

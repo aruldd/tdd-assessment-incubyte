@@ -6,7 +6,7 @@
  */
 export function add(numbers: string): number {
   if (numbers.length === 0) return 0;
-  const splitNumbers: number[] = numbers.split(',').map(parseInt);
+  const splitNumbers: number[] = numbers.split(',').map((n) => parseInt(n));
 
   return splitNumbers.reduce(
     (previousValue: number, currentValue: number): number => {
