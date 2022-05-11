@@ -21,4 +21,7 @@ describe('Add', () => {
   it('should support different delimiters using format "//[delimiter]\n[numbers…]"', () => {
     expect(add('//;\n1;2')).toBe(3);
   });
+  it('should support different delimiters and "\n"', () => {
+    expect(add('//;\n1;2\n3')).toBe(6);
+  });
 });
