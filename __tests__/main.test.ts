@@ -11,4 +11,7 @@ describe('Add', () => {
   it('should return the sum of two values', () => {
     expect(add('1,2')).toBe(3);
   });
+  it('should handle an unknown amount of numbers', () => {
+    expect(add('1,2,4,6,7')).toBe(20);
+  });
 });
