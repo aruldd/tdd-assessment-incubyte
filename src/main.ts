@@ -21,6 +21,11 @@ export function add(numbers: string): number {
     .split('\n')
     .map((n) => parseInt(n)); // using split join split to make it simple and not resort to regex
 
+  const negativeNumbers = splitNumbers.filter((n) => n < 0);
+  if (negativeNumbers.length > 0) {
+    throw `negatives not allowed ${negativeNumbers.join(',')}`;
+  }
+
   return splitNumbers.reduce(
     (previousValue: number, currentValue: number): number => {
       return previousValue + currentValue;

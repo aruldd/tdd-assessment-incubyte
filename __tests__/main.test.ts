@@ -24,4 +24,7 @@ describe('Add', () => {
   it('should support different delimiters and "\n"', () => {
     expect(add('//;\n1;2\n3')).toBe(6);
   });
+  it('should raise an exception when negative values are passed', () => {
+    expect(() => add('-1,2,-3')).toThrow('negatives not allowed -1,-3');
+  });
 });
