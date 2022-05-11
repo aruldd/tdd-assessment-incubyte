@@ -16,5 +16,10 @@ This project is intended to be used with the latest Active LTS release of [Node.
 - `test` - run tests,
 - `test:watch` - interactive watch mode to automatically re-run tests
 
-[nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
-[boilerplate-link]: https://github.com/jsynowiec/node-typescript-boilerplate#node-typescript-boilerplate
+## How to run
+
+- Run `npm install`
+- Then compile the typescript files using `npm build`
+- Finally, run the tests using `npm test`
+  [nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
+  [boilerplate-link]: https://github.com/jsynowiec/node-typescript-boilerplate#node-typescript-boilerplate
