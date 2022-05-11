@@ -14,4 +14,7 @@ describe('Add', () => {
   it('should handle an unknown amount of numbers', () => {
     expect(add('1,2,4,6,7')).toBe(20);
   });
+  it('should handle new lines between numbers (instead of commas)', () => {
+    expect(add('1\n2,4')).toBe(7);
+  });
 });

@@ -6,7 +6,11 @@
  */
 export function add(numbers: string): number {
   if (numbers.length === 0) return 0;
-  const splitNumbers: number[] = numbers.split(',').map((n) => parseInt(n));
+  const splitNumbers: number[] = numbers
+    .split(',')
+    .join('\n')
+    .split('\n')
+    .map((n) => parseInt(n)); // using split join split to make it simple and not resort to regex
 
   return splitNumbers.reduce(
     (previousValue: number, currentValue: number): number => {
